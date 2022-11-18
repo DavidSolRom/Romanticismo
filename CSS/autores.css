@@ -1,0 +1,92 @@
+/**********************************************************/
+/* Web del Romanticismo                                   */
+/* Hoja de estilo para autores                            */
+/* Autor: David Solera Romero                             */
+/* Versión: 1.0                                           */
+/* 21 de octubre de 2022                                  */
+/**********************************************************/
+
+/* Estilo general                                         */
+
+@font-face {
+    src: url('../fonts/Oswald-VariableFont_wght.ttf');
+    font-family: titulos;
+           }
+
+@font-face {
+    src: url('../fonts/Quicksand-VariableFont_wght.ttf');
+    font-family: textos;
+           }
+
+* {box-sizing:border-box;} /* en width debe contar desde el 
+                              borde hacia adentro */
+
+body{
+    margin:0;padding:0; /* para quitar el fondo
+                           por defecto del navegador */
+    font-family: textos;
+    /* padding: 3%; No necesito padding con un layout single column */
+    text-indent: 3em;
+    background-color: rgb(255, 202, 172)
+    }
+
+#wrapper{
+    background-color: rgb(255, 255, 255);
+    width:80%;
+    margin: 0 auto;
+    padding: 2% 2% 10% 2%;
+}
+
+h1,h2,h3{
+    font-family: titulos;
+    text-decoration: underline;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    text-indent: 0;
+           }
+
+    /* Para subrayar podemos utilizar:  
+    border-bottom: <px> <color>;
+    width: <porcentaje>; */
+    /* Para centrar un bloque entero con
+    border-bottom usamos margin:auto */
+
+#espronceda{
+    float:left; /* Se utiliza para que la imagen tenga el texto alrededor */
+                /* Pero si el texto se queda corto, la imagen queda más   */
+                /* grande que incluso el wrapper                          */
+
+                /* La solución es poner un div vacío en el html dentro    */
+                /* del wrapper y en el estilo pongo clear:both            */
+    padding:9px;
+    width:29%;
+}
+
+#limpiar {clear:both;} /* desactivar el float left/right */
+
+p{
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(44, 29, 21);
+}
+
+/* pseudoclase como selector :hover (ratón encima) */
+
+a:hover {color:rgb(120, 56, 17);}
+
+/***** MEDIA QUERIES *****/
+/* Es un if que permite fijar problemas de responsividad */
+/* Normalmente se ponen dos; para tablet y para móvil    */
+
+@media only screen and (width<=800px){
+    #espronceda {width:50%}
+}
+
+@media only screen and (width<=500px){
+    #espronceda {width:100%;}
+    #wrapper {width:100%;}
+}

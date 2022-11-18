@@ -1,0 +1,63 @@
+/**********************************************************/
+/* Web del Romanticismo                                   */
+/* Hoja de estilo para la canción del pirata              */
+/* Autor: David Solera Romero                             */
+/* Versión: 2.0                                           */
+/* 09 de noviembre de 2022                                */
+/**********************************************************/
+
+/* Estilo general                                         */
+
+@font-face {
+    src: url('../fonts/IndieFlower-Regular.ttf');
+    font-family: textos;
+            }
+
+@font-face {
+    src: url('../fonts/Pacifico-Regular.ttf');
+     font-family: titulos;
+            }
+
+body{font-family:textos;
+    background-image: url(../images/photo-background/fondo.jpg);
+    /* Vamos a colocar una foto sola de fondo */
+    background-repeat: no-repeat;
+    /* Para que no se repita */
+    background-size: cover;
+    /* Para que cubra todo el fondo */
+    height:100vh
+    /* Cubrimos el espacio en blanco que queda en la imagen */
+        }
+    
+#poema {margin-left: 60%;
+        }
+
+.fa {font-size: 140% !important;}
+/* Provoca el cambio en todos los iconos
+    !important es para que priorice nuestra opción a la puesta por defecto */
+
+/* .fa-facebook-square {color:#3B5998} */
+/* Esto es para colorear cada icono
+con su respectivo nombre se selecciona el color */
+
+a {
+    text-decoration: none;
+    color:#F1EECD;
+}
+
+/* pseudoclase como selector :hover (ratón encima) */
+
+a:hover {color:#DDD783;}
+
+h1,h2,h3{
+    font-family: titulos;
+    text-decoration: underline;
+    text-indent: 0;
+        }
+
+/***** MEDIA QUERIES *****/
+    
+@media only screen and (width<=1120px){
+    #poema {color:white;
+            margin-left:20%;}
+        }

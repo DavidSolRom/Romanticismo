@@ -1,0 +1,41 @@
+/**********************************************************/
+/* Web del Romanticismo                                   */
+/* Hoja de estilo para la canción del pirata              */
+/* Autor: David Solera Romero                             */
+/* Versión: 1.0                                           */
+/* 04 de noviembre de 2022                                */
+/**********************************************************/
+
+/* Estilo general                                         */
+
+@font-face {
+    src: url('../fonts/IndieFlower-Regular.ttf');
+    font-family: textos;
+            }
+
+@font-face {
+    src: url('../fonts/Pacifico-Regular.ttf');
+     font-family: titulos;
+            }
+
+body{
+    font-family: textos;
+    font-size:1.1em;
+    color:#263A55;
+    background-image: url("../images/backgrounds/gold-pirates-icon-with-dark-blue-background-free-vector.jpg");
+    background-repeat: repeat-y;
+    /* Creamos una columna con la imagen de fondo */
+    background-size: 14%;
+    background-color: #C6996A;
+    }
+
+#poema{
+    width:30%;
+    margin-left:20%;
+}
+
+h1,h2,h3{
+    font-family: titulos;
+    text-decoration: underline;
+    text-indent: 0;
+        }

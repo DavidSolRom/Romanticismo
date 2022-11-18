@@ -1,0 +1,117 @@
+/**********************************************************/
+/* Web del Romanticismo                                   */
+/* Hoja de estilo para index.html                         */
+/* Autor: David Solera Romero                             */
+/* Versión: 1.0                                           */
+/* 11 de noviembre de 2022                                */
+/**********************************************************/
+
+/* Estilo general                                         */
+
+@font-face {
+    src: url('../fonts/Oswald-VariableFont_wght.ttf');
+    font-family: titulos; /* familia de un tipo de letra */
+           }
+
+@font-face {
+    src: url('../fonts/Quicksand-VariableFont_wght.ttf');
+    font-family: textos; /* familia de un tipo de letra */
+           }
+
+* {box-sizing: border-box;} /* preguntar */
+
+body{margin:0;padding:0; /* quitamos por defectos */
+    font-family: textos; /* familia de texto */
+    background-color:#61635f
+}
+
+#wrapper {width:80%;
+          background-color: #fff;
+          margin:auto;}
+
+h1,h2,h3{
+    font-family: titulos;
+}
+
+/*************** HERO SECTION VERSIÓN 1: FOTO + TEXTO ***************/
+
+#hero{background-image: url('../images/herosection/herosection.jpg'); /* imagen fondo */
+       height:100vh; /* para obligar a que se vea más allá del contenido (alto imagen) */
+       background-repeat: no-repeat; /* no la repitas */
+       background-size: cover; /* cubre todo el fondo */
+       background-position: 33%; /* fija lo que hay en el medio o lo que indiquemos */
+
+       padding-left:4%; /* espacio para el texto por la izquierda */
+       padding-top:4%; /* espacio para el texto por arriba */
+    }
+
+#titulo{background-color: rgba(255,255,255,0.275); /* color de fondo y luego transparencia */
+         width: 39%; /* ancho */ 
+         padding: 2%; /* borde interior de un bloque */
+         border-radius: 30%; /* redondear esquinas de un bloque */
+         text-align: center; /* alinear el texto al centro */
+         font-family: titulos; /* tipo de letra utilizada */
+         font-size: 3rem; /* tamaño triple de lo normal */
+         }
+
+/*************** HERO SECTION VERSIÓN 2: HAIKEI.APP + POSITION + FROSTED GLASS ***************/
+
+#hero2{ background-image: url(../images/herosection/vectorial.svg);
+         height: 100vh;
+         background-repeat: no-repeat;
+         background-size: cover;
+
+         position: relative; /* el hero se mueve de sitio, es relativo */
+}
+
+#titulo2{ font-family: titulos;
+           font-size: 3rem;
+           width: 50%;
+           background-color: rgba(255, 255, 255, 0.3);
+           text-align: center; /* podría haber sido un padding */
+           border-radius: 20px;
+
+           /* estas 4 reglas colocan una caja en medio de otra */
+           position: absolute; /* el título tiene una posición fija, es absoluto */
+           top: 50%; 
+           left: 50%;
+           transform:translate(-50%,-50%);
+
+           /* para el efecto frosted glass (fondo blanco
+              y con opacidad por debajo de 0.5) */
+           backdrop-filter: blur(5px);
+
+}
+
+/*************** HERO SECTION VERSIÓN 3: COLOR LISO + GETWAVES ***************/
+
+#hero3{ background-color: #000b76; /* Mismo color que la ola */
+        height:40vh; /* Al ser color liso, disminuimos los vh */
+
+        position:relative;
+}
+
+#titulo3{ font-family: titulos;
+          font-size: 4rem;
+          color:#fff;
+
+          position:absolute;
+          top:50%;
+          left:50%;
+          transform: translate(-50%,-50%);
+          text-align: center;
+}
+
+/*************** MEDIA QUERIES ***************/
+
+@media only screen and (width<= 900px){
+    #wrapper {width:90%;}
+    #titulo {font-size: 2rem;
+             width: 43%;}
+    #titulo2 {font-size: 2.5rem;
+              width:57%;}
+}
+
+@media only screen and (width<= 600px){
+    #wrapper{width:100%}
+}
